@@ -6,8 +6,12 @@
 @import '../3rd-party/font-awesome.min.css';
 
 /* components */
+@import '../components/achievements.css';
 @import '../components/button.css';
+@import '../components/cards.css';
 @import '../components/header.css';
+@import '../components/progress-bar.css';
+@import '../components/services.css';
 
 /* CUSTOM STYLE BELOW THIS COMMENT LINE */
 

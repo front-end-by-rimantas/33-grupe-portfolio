@@ -1,0 +1,28 @@
+.services {
+    display: grid;
+    gap: 30px;
+}
+.services > .service {
+    background-color: pink;
+}
+.services > .service > .icon {
+    height: 80px;
+    width: 80px;
+}
+.services > .service > .number {
+}
+.services > .service > .title {
+}
+.services > .service > .description {
+}
+
+@media (min-width: 767px) {
+    .services {
+        grid-template-columns: 1fr 2fr;
+    }
+}
+@media (min-width: 991px) {
+    .services {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

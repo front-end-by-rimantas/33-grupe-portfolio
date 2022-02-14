@@ -13,3 +13,31 @@ body {
 
 :root {
 }
+
+.bg-white {
+    background-color: #fff;
+}
+
+.bg-grey {
+    background-color: #f6f7f9;
+}
+
+.bg-dark {
+    background: linear-gradient(90deg, #020275 0%, #00005f 100%);
+}
+
+.section-short-title {
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+.section-title {
+    font-size: 38px;
+    line-height: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+.section-description {
+    font-size: 20px;
+    line-height: 1.2em;
+    margin-bottom: 1em;
+}
