@@ -7,13 +7,28 @@
 
 /* components */
 @import '../components/button.css';
+@import '../components/header.css';
 
 /* CUSTOM STYLE BELOW THIS COMMENT LINE */
+
+body {
+    background: linear-gradient(90deg, #03228f 0%, #0c69da 100%);
+}
 
 /* header start */
 /* header end */
 
 /* hero start */
+.hero {
+    min-height: 100vh;
+    color: #fff;
+}
+.hero .main-title {
+    font-size: 50px;
+}
+.hero .main-description {
+    font-size: 20px;
+}
 /* hero end */
 
 /* top logos start */

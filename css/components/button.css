@@ -1,0 +1,9 @@
+.btn {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 1em;
+    text-decoration: none;
+    padding: 0.5em 1.5em;
+    border-radius: 1em;
+    background-color: orange;
+}
