@@ -1,0 +1,50 @@
+.services {
+    display: grid;
+    gap: 30px;
+}
+.services > .service {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        'icon number'
+        'title title'
+        'desc desc';
+    gap: 15px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.services > .service > .icon {
+    grid-area: icon;
+    height: 80px;
+    width: 80px;
+}
+.services > .service > .number {
+    grid-area: number;
+    font-size: 50px;
+    justify-self: end;
+    align-self: start;
+}
+.services > .service > .title {
+    grid-area: title;
+    /* grid-column: span 2; */
+    font-weight: bold;
+    font-size: 22px;
+}
+.services > .service > .description {
+    grid-area: desc;
+    /* grid-column: span 2; */
+    font-size: 17px;
+    line-height: 1.8em;
+}
+
+@media (min-width: 767px) {
+    .services {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (min-width: 991px) {
+    .services {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

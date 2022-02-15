@@ -1,0 +1,26 @@
+.btn {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 1em;
+    text-decoration: none;
+    padding: 0.5em 1.5em;
+    border: none;
+    border-radius: 1em;
+    background-color: orange;
+}
+.btn:hover {
+    background-color: orange;
+}
+
+.btn.btn-blue {
+    background-color: #00f;
+    color: #fff;
+}
+.btn.btn-blue:hover {
+    background-color: #00f;
+    color: #fff;
+}
+
+.btn.btn-box {
+    border-radius: 4px;
+}
