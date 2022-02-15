@@ -4,16 +4,23 @@
 }
 .advantages > .advantage {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50px 1fr;
+    gap: 10px 30px;
     grid-template-areas:
         'icon title'
         'icon desc';
 }
 .advantages > .advantage > .icon {
     grid-area: icon;
+    height: 50px;
+    align-self: center;
 }
 .advantages > .advantage > .title {
     grid-area: title;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+    color: #333;
 }
 .advantages > .advantage > .description {
     grid-area: desc;
