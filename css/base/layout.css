@@ -47,7 +47,6 @@
     float: left;
     margin-left: var(--half-gap);
     margin-right: var(--half-gap);
-    background-color: pink;
 }
 .row > .reverse {
     float: right;
@@ -127,16 +126,16 @@
 }
 
 .row .visible {
-    display: inline-block;
+    display: inline-block !important;
 }
 .row .visible-flex {
-    display: flex;
+    display: flex !important;
 }
 .row .visible-grid {
-    display: grid;
+    display: grid !important;
 }
 .row .hidden {
-    display: none;
+    display: none !important;
 }
 
 @media (min-width: 575px) {
@@ -220,16 +219,16 @@
     }
 
     .row .visible-sm {
-        display: inline-block;
+        display: inline-block !important;
     }
     .row .visible-flex-sm {
-        display: flex;
+        display: flex !important;
     }
     .row .visible-grid-sm {
-        display: grid;
+        display: grid !important;
     }
     .row .hidden-sm {
-        display: none;
+        display: none !important;
     }
     .row > .reverse-sm {
         float: right;
@@ -324,16 +323,16 @@
     }
 
     .row .visible-md {
-        display: inline-block;
+        display: inline-block !important;
     }
     .row .visible-flex-md {
-        display: flex;
+        display: flex !important;
     }
     .row .visible-grid-md {
-        display: grid;
+        display: grid !important;
     }
     .row .hidden-md {
-        display: none;
+        display: none !important;
     }
     .row > .reverse-md {
         float: right;
@@ -427,16 +426,16 @@
     }
 
     .row .visible-lg {
-        display: inline-block;
+        display: inline-block !important;
     }
     .row .visible-flex-lg {
-        display: flex;
+        display: flex !important;
     }
     .row .visible-grid-lg {
-        display: grid;
+        display: grid !important;
     }
     .row .hidden-lg {
-        display: none;
+        display: none !important;
     }
     .row > .reverse-lg {
         float: right;
@@ -531,16 +530,16 @@
     }
 
     .row .visible-xl {
-        display: inline-block;
+        display: inline-block !important;
     }
     .row .visible-flex-xl {
-        display: flex;
+        display: flex !important;
     }
     .row .visible-grid-xl {
-        display: grid;
+        display: grid !important;
     }
     .row .hidden-xl {
-        display: none;
+        display: none !important;
     }
     .row > .reverse-xl {
         float: right;
