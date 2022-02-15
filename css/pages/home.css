@@ -7,6 +7,7 @@
 
 /* components */
 @import '../components/achievements.css';
+@import '../components/advantages.css';
 @import '../components/button.css';
 @import '../components/cards.css';
 @import '../components/header.css';

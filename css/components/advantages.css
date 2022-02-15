@@ -1,0 +1,20 @@
+.advantages {
+    display: grid;
+    gap: 30px;
+}
+.advantages > .advantage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        'icon title'
+        'icon desc';
+}
+.advantages > .advantage > .icon {
+    grid-area: icon;
+}
+.advantages > .advantage > .title {
+    grid-area: title;
+}
+.advantages > .advantage > .description {
+    grid-area: desc;
+}
