@@ -18,11 +18,65 @@
 .header .main-nav > a {
     color: #fff;
     text-decoration: none;
+    line-height: 20px;
+    padding: 10px 0;
 }
 .header .main-nav > a:hover,
 .header .main-nav > a.active {
     color: #bbb;
 }
+
+.header .dropdown {
+    position: relative;
+    cursor: pointer;
+}
+.header nav > .dropdown > .label {
+    line-height: 20px;
+    font-size: 16px;
+    color: #fff;
+    padding: 10px 0;
+}
+.header .dropdown > .label {
+    color: #333;
+    padding: 10px 20px;
+}
+.header .dropdown > .label:hover {
+    color: #bbb;
+}
+.header .dropdown > .list {
+    display: none;
+    flex-direction: column;
+    width: 240px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateY(100%);
+    background-color: #fff;
+    box-shadow: 0 4px 8px #fff8;
+}
+.header .dropdown > .list .list {
+    bottom: unset;
+    top: 0;
+}
+.header .dropdown:hover > .list {
+    display: flex;
+}
+.header .list > a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+}
+.header .list > a:hover {
+    color: #bbb;
+}
+.header .dropdown.dropdown-left:hover > .list {
+    transform: translateX(-100%);
+}
+.header .dropdown.dropdown-right:hover > .list {
+    transform: translateY(0) translateX(100%);
+}
+
 .header .hamburger {
     color: #fff;
     font-size: 25px;
