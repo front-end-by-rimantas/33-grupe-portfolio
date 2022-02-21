@@ -20,7 +20,13 @@ import { servicesData } from '../data/servicesData.js';
 /* about progress-bars end */
 
 /* services start */
-services('#services_block', servicesData);
+const [serviceErr, serviceMsg] = services('#services_block', servicesData);
+
+if (serviceErr) {
+    console.error(serviceMsg);
+} else {
+    console.log(serviceMsg);
+}
 /* services end */
 
 /* why choose us start */

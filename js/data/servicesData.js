@@ -7,6 +7,14 @@ const servicesData = [
         description:
             'At vero eos et accusamus etiusto odio praesentium accusamus etiusto odio data center for managing database.',
     },
+    4852,
+    'eresthy',
+    null,
+    [],
+    {},
+    {
+        name: 'Petras',
+    },
     {
         img: '2-static.png',
         alt: 'Service',
