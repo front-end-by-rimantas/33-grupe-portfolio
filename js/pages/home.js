@@ -1,4 +1,6 @@
 // IMPORTS
+import { services } from '../components/services/services.js';
+import { servicesData } from '../data/servicesData.js';
 
 // CODE EXECUTION BELOW THIS COMMENT LINE
 
@@ -18,6 +20,7 @@
 /* about progress-bars end */
 
 /* services start */
+services('#services_block', servicesData);
 /* services end */
 
 /* why choose us start */
