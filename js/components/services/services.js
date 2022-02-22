@@ -1,3 +1,19 @@
+/**
+ * Pasirinktame elemente is duotu duomenu yra sugeneruojamas paslaugu korteliu HTML turinys.
+ * @param {string} selector Taisykle, kaip rasti norima HTML elementa
+ * @param {Object[]} data Duomenys, kuriuos naudojant yra konstruojamas HTML turinys
+ * @param {string} data[].img Paslaugos ikona/nuotrauka su pilnu failo pletiniu
+ * @param {string} data[].alt Paslaugos ikonos/nuotraukos alt reiksme
+ * @param {string} data[].number Paslaugos numeris
+ * @param {string} data[].title Paslaugos pavadinimas
+ * @param {string} data[].description Paslaugos trumpas aprasas
+ *
+ * @example <caption>Pavyzdinis naudojimas, kai neduodama duomenu.</caption>
+ * // returns [true, 'Data has to be a non-empty array']
+ * services('div', []);
+ *
+ * @returns {[boolean, string]} Funkcijos veikimo statusas `[error, message]`
+ */
 function services(selector, data) {
     if (typeof selector !== 'string' || selector === '') {
         return [true, 'Selector has to be a not-empty string'];
