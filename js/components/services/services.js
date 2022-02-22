@@ -32,7 +32,24 @@ function services(selector, data) {
     let HTML = '';
 
     for (const service of data) {
-        if (typeof service !== 'object') {
+        if (
+            typeof service !== 'object' ||
+            service === null ||
+            Array.isArray(service) ||
+            !service.img ||
+            !service.img ||
+            !service.img ||
+            !service.alt ||
+            !service.alt ||
+            !service.alt ||
+            !service.number ||
+            !service.number ||
+            !service.number ||
+            !service.title ||
+            !service.title ||
+            !service.title ||
+            !service.description
+        ) {
             continue;
         }
         HTML += `<div class="service">
@@ -41,6 +58,10 @@ function services(selector, data) {
                     <div class="title">${service.title}</div>
                     <div class="description">${service.description}</div>
                 </div>`;
+    }
+
+    if (HTML === '') {
+        return [true, 'Data has no valid service objects'];
     }
 
     servicesDOM.innerHTML = HTML;
