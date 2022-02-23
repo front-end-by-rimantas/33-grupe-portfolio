@@ -39,6 +39,10 @@ function services(selector, data) {
         ) {
             return false;
         }
+        const keys = Object.keys(service);
+        if (keys.length < 4 || keys.length > 5) {
+            return false;
+        }
         return true;
     };
 
@@ -58,6 +62,9 @@ function services(selector, data) {
     };
 
     const isValidServiceAlt = (alt) => {
+        if (alt === undefined) {
+            return true;
+        }
         if (typeof alt !== 'string') {
             return false;
         }
@@ -65,21 +72,27 @@ function services(selector, data) {
     };
 
     const isValidServiceNumber = (number) => {
-        if (typeof number !== 'string' || number.length < 2) {
+        if (
+            typeof number !== 'string' ||
+            number.length <= 1 ||
+            !isFinite(+number) ||
+            +number < 0 ||
+            +number % 1 !== 0
+        ) {
             return false;
         }
         return true;
     };
 
     const isValidServiceTitle = (title) => {
-        if (typeof title !== 'string') {
+        if (typeof title !== 'string' || title.trim() === '') {
             return false;
         }
         return true;
     };
 
     const isValidServiceDescription = (description) => {
-        if (typeof description !== 'string') {
+        if (typeof description !== 'string' || description.trim() === '') {
             return false;
         }
         return true;
@@ -105,7 +118,7 @@ function services(selector, data) {
         }
         HTML += `<div class="service">
                     <img src="./img/services/${service.img.trim()}" 
-                        alt="${service.alt}" class="icon">
+                        alt="${service.alt ? service.alt : ''}" class="icon">
                     <div class="number">${service.number}</div>
                     <div class="title">${service.title}</div>
                     <div class="description">${service.description}</div>
