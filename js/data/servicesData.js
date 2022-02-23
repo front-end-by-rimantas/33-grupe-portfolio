@@ -1,6 +1,6 @@
 const servicesData = [
     {
-        img: '1-static.png',
+        img: ' 1-static.png ',
         alt: 'Service',
         number: '01',
         title: 'Software development',

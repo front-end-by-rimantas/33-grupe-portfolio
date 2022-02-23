@@ -31,29 +31,81 @@ function services(selector, data) {
     }
     let HTML = '';
 
-    for (const service of data) {
+    const isValidServiceObject = (service) => {
         if (
             typeof service !== 'object' ||
             service === null ||
-            Array.isArray(service) ||
-            !service.img ||
-            !service.img ||
-            !service.img ||
-            !service.alt ||
-            !service.alt ||
-            !service.alt ||
-            !service.number ||
-            !service.number ||
-            !service.number ||
-            !service.title ||
-            !service.title ||
-            !service.title ||
-            !service.description
+            Array.isArray(service)
         ) {
+            return false;
+        }
+        return true;
+    };
+
+    const isValidServiceImg = (img) => {
+        if (typeof img !== 'string' || img === '') {
+            return false;
+        }
+        const parts = img.split('.');
+        if (
+            parts.length < 2 ||
+            parts[0].trimStart() === '' ||
+            parts[1].trim() === ''
+        ) {
+            return false;
+        }
+        return true;
+    };
+
+    const isValidServiceAlt = (alt) => {
+        if (typeof alt !== 'string') {
+            return false;
+        }
+        return true;
+    };
+
+    const isValidServiceNumber = (number) => {
+        if (typeof number !== 'string' || number.length < 2) {
+            return false;
+        }
+        return true;
+    };
+
+    const isValidServiceTitle = (title) => {
+        if (typeof title !== 'string') {
+            return false;
+        }
+        return true;
+    };
+
+    const isValidServiceDescription = (description) => {
+        if (typeof description !== 'string') {
+            return false;
+        }
+        return true;
+    };
+
+    const isValidService = (service) => {
+        if (
+            !isValidServiceObject(service) ||
+            !isValidServiceImg(service.img) ||
+            !isValidServiceAlt(service.alt) ||
+            !isValidServiceNumber(service.number) ||
+            !isValidServiceTitle(service.title) ||
+            !isValidServiceDescription(service.description)
+        ) {
+            return false;
+        }
+        return true;
+    };
+
+    for (const service of data) {
+        if (!isValidService(service)) {
             continue;
         }
         HTML += `<div class="service">
-                    <img src="./img/services/${service.img}" alt="${service.alt}" class="icon">
+                    <img src="./img/services/${service.img.trim()}" 
+                        alt="${service.alt}" class="icon">
                     <div class="number">${service.number}</div>
                     <div class="title">${service.title}</div>
                     <div class="description">${service.description}</div>
