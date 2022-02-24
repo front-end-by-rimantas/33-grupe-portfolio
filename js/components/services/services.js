@@ -112,6 +112,7 @@ function services(selector, data) {
         return true;
     };
 
+    let i = 0;
     for (const service of data) {
         if (!isValidService(service)) {
             continue;
@@ -119,7 +120,7 @@ function services(selector, data) {
         HTML += `<div class="service">
                     <img src="./img/services/${service.img.trim()}" 
                         alt="${service.alt ? service.alt : ''}" class="icon">
-                    <div class="number">${service.number}</div>
+                    <div class="number">${++i > 9 ? i : '0' + i}</div>
                     <div class="title">${service.title}</div>
                     <div class="description">${service.description}</div>
                 </div>`;
