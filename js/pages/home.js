@@ -1,4 +1,6 @@
 // IMPORTS
+import { services } from '../components/services/services.js';
+import { servicesData } from '../data/servicesData.js';
 
 // CODE EXECUTION BELOW THIS COMMENT LINE
 
@@ -18,6 +20,13 @@
 /* about progress-bars end */
 
 /* services start */
+const [serviceErr, serviceMsg] = services('#services_block', servicesData);
+
+if (serviceErr) {
+    console.error(serviceMsg);
+} else {
+    console.log(serviceMsg);
+}
 /* services end */
 
 /* why choose us start */
