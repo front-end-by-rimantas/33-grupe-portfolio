@@ -1,6 +1,8 @@
 // IMPORTS
 import { services } from '../components/services/services.js';
 import { servicesData } from '../data/servicesData.js';
+import { ProgressBar } from '../components/progress-bar/ProgressBar.js';
+import { progressBarData } from '../data/progressBarData.js';
 
 // CODE EXECUTION BELOW THIS COMMENT LINE
 
@@ -17,6 +19,8 @@ import { servicesData } from '../data/servicesData.js';
 /* about cards end */
 
 /* about progress-bars start */
+const p = new ProgressBar('#progress_bar_block > p', progressBarData);
+console.log(p);
 /* about progress-bars end */
 
 /* services start */
