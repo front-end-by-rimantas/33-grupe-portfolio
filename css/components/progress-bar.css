@@ -29,6 +29,15 @@
     animation-name: loading;
     animation-duration: 2s;
 }
+.progress-bar .bar > .loading.loading-orange {
+    background-color: #f93;
+}
+.progress-bar .bar > .loading.loading-red {
+    background-color: #f03;
+}
+.progress-bar .bar > .loading.loading-green {
+    background-color: #0f3;
+}
 
 @keyframes loading {
     0% {

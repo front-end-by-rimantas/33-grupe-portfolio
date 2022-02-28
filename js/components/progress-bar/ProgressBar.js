@@ -48,21 +48,40 @@ class ProgressBar {
         return true;
     }
 
+    isValidSingleBarData(bar) {
+        return true;
+    }
+
+    barHTML(bar) {
+        const color = bar.color ? ' loading-' + bar.color : '';
+        return `<div class="progress-bar">
+                    <div class="top">
+                        <div class="label">${bar.label}</div>
+                        <div class="value">${bar.value}%</div>
+                    </div>
+                    <div class="bottom">
+                        <div class="bar" style="width: ${bar.value}%;">
+                            <div class="loading${color}"></div>
+                        </div>
+                    </div>
+                </div>`;
+    }
+
     render() {
         let HTML = '';
-        for (let i = 0; i < this.data.length; i++) {
-            HTML += `<div class="progress-bar">
-                        <div class="top">
-                            <div class="label">UX Desgin</div>
-                            <div class="value">90%</div>
-                        </div>
-                        <div class="bottom">
-                            <div class="bar" style="width: 90%;">
-                                <div class="loading"></div>
-                            </div>
-                        </div>
-                    </div>`;
+        for (const progressBar of this.data) {
+            if (!this.isValidSingleBarData(progressBar)) {
+                continue;
+            }
+            HTML += this.barHTML(progressBar);
         }
+
+        if (HTML === '') {
+            const err = 'ERROR: data has no valid progress bar objects';
+            console.error(err);
+            return err;
+        }
+
         this.DOM.insertAdjacentHTML('afterend', HTML);
         return;
     }
