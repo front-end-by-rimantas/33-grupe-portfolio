@@ -7,9 +7,23 @@ class ProgressBar {
     }
 
     init() {
-        if (this.isValidSelector() && this.isValidData()) {
-            this.render();
+        if (!this.isValidSelector()) {
+            const err = 'ERROR: invalid selector';
+            console.error(err);
+            return err;
         }
+        if (!this.isValidData()) {
+            const err = 'ERROR: invalid data';
+            console.error(err);
+            return err;
+        }
+        if (!this.getTargetElement()) {
+            const err =
+                'ERROR: could not found element based on provided selector';
+            console.error(err);
+            return err;
+        }
+        this.render();
     }
 
     isValidSelector() {
@@ -21,6 +35,14 @@ class ProgressBar {
 
     isValidData() {
         if (!Array.isArray(this.data) || this.data.length === 0) {
+            return false;
+        }
+        return true;
+    }
+
+    getTargetElement() {
+        this.DOM = document.querySelector(this.selector);
+        if (this.DOM === null) {
             return false;
         }
         return true;
@@ -41,7 +63,7 @@ class ProgressBar {
                         </div>
                     </div>`;
         }
-
+        this.DOM.insertAdjacentHTML('afterend', HTML);
         return;
     }
 }

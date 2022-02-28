@@ -18,7 +18,8 @@ import { ProgressBar } from '../components/progress-bar/ProgressBar.js';
 /* about cards end */
 
 /* about progress-bars start */
-new ProgressBar();
+const p = new ProgressBar('#progress_bar_block > p', [{}, {}, {}]);
+console.log(p);
 /* about progress-bars end */
 
 /* services start */
