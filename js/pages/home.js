@@ -18,7 +18,7 @@ import { ProgressBar } from '../components/progress-bar/ProgressBar.js';
 /* about cards end */
 
 /* about progress-bars start */
-const progress = new ProgressBar();
+new ProgressBar();
 /* about progress-bars end */
 
 /* services start */
